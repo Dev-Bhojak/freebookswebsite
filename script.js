@@ -1,7 +1,7 @@
 // This is openlibrary.org api end point.
 const END_POINT = "http://openlibrary.org/search.json?q=";
 
-const main2 = document.getElementById("main-2");
+const main2 = document.getElementById("contentId");
 
 const searchBook = (query) => {
   url = `http://openlibrary.org/search.json?q=${query}`;
@@ -36,8 +36,10 @@ window.onload = () => {
   const searchTextElemenet = document.getElementById("searchText");
 
   searchTextElemenet.addEventListener("keydown", (event) => {
-    if ("Enter" === event.key) {
-      searchBook(searchTextElemenet.value);
+    if (searchTextElemenet.value !== "") {
+      if ("Enter" === event.key) {
+        searchBook(searchTextElemenet.value);
+      }
     }
   });
 };
@@ -46,5 +48,7 @@ const searchButton = document
   .getElementById("searchButton")
   .addEventListener("click", () => {
     const searchTextElemenet = document.getElementById("searchText");
-    searchBook(searchTextElemenet.value);
+    if (searchTextElemenet.value !== "") {
+      searchBook(searchTextElemenet.value);
+    }
   });
