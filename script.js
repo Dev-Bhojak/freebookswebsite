@@ -1,6 +1,8 @@
+// This is openlibrary.org api end point.
 const END_POINT = "http://openlibrary.org/search.json?q=";
 
 const main2 = document.getElementById("main-2");
+
 const searchBook = (query) => {
   url = `http://openlibrary.org/search.json?q=${query}`;
   fetch(url)
@@ -15,9 +17,11 @@ const searchBook = (query) => {
       );
 
       cardGen(titles, link, cover_edition_key);
-    });
+    })
+    .catch((error) => console.log(error));
 };
 const cardGen = (titles, link, cover_edition_key) => {
+  main2.innerHTML = "";
   let i = 0;
   while (i < titles.length) {
     const cardPrep = document.createElement("div");

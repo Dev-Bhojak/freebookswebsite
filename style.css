@@ -33,12 +33,7 @@ body {
   column-gap: 50px;
   margin: 0 100px;
 }
-/* .content div {
-  display: inline-block;
 
-  border: 1px solid gray;
-  border-radius: 15px;
-} */
 .bookCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s;
@@ -63,7 +58,7 @@ body {
 }
 
 .search {
-  margin: 3vh 0;
+  margin: 5vh 0;
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -83,6 +78,12 @@ body {
   padding: 5px;
   border-radius: 5px;
   color: #f1f1f8;
+  text-decoration: none;
+}
+.card-btn:hover {
+  color: #418a68;
+  background-color: #f1f1f8;
+  border: 1px solid #418a68;
 }
 .flex {
   width: 100%;
@@ -90,6 +91,24 @@ body {
   max-width: 200px;
 }
 
+.search button {
+  background-color: #75797a;
+  padding: 5px;
+  color: #f1f1f8;
+  font-size: large;
+  border-radius: 5px;
+}
+.search button:hover {
+  background-color: #f1f1f8;
+  color: #75797a;
+  border: 1px solid #75797a;
+  animation-duration: 0.5s;
+}
+.search input {
+  width: 200px;
+  height: 40px;
+  font-size: large;
+}
 @media (max-width: 1000px) {
   .content {
     display: grid;
@@ -99,17 +118,6 @@ body {
 
     place-items: center;
   }
-}
-.search button {
-  background-color: #75797a;
-  padding: 5px;
-  color: #f1f1f8;
-  font-size: large;
-}
-.search input {
-  width: 200px;
-  height: 40px;
-  font-size: large;
 }
 @media (max-width: 700px) {
   .content {
